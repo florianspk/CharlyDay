@@ -4,3 +4,7 @@
 .settings
 /idea
 /src/*.class
+/out
+/out/
+/bin/
+.uml
