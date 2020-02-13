@@ -1,23 +1,18 @@
 <?php
 
 namespace coboard\vues;
-class VueClient
+class VueRole
 {
+    private $tab;
 
-    public $tab;
-
-    public function __construct($tableau) {
-        $this->tab = $tableau;
+    public function __construct($tab) {
+        $this->tab = $tab;
     }
 
     public function render($selecteur) {
         switch ($selecteur){
-            case 'afficherCompte' : {
-                $content = $this->afficherCompte();
-                break;
-            }
-            case 'login' : {
-                $content = $this->login();
+            case 'afficherRole' : {
+                $content = $this->role();
                 break;
             }
         }
@@ -71,12 +66,8 @@ END;
         echo $html;
     }
 
-    private function afficherCompte() {
-        include('../Front/compte.html');
-    }
-
-    private function login() {
-        include('../Front/login.html');
+    private function role() {
+        include('../Front/role.html');
     }
 
 }

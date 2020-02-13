@@ -1,7 +1,7 @@
 <?php
 
 namespace coboard\vues;
-class VueClient
+class VuePermanence
 {
 
     public $tab;
@@ -12,12 +12,8 @@ class VueClient
 
     public function render($selecteur) {
         switch ($selecteur){
-            case 'afficherCompte' : {
-                $content = $this->afficherCompte();
-                break;
-            }
-            case 'login' : {
-                $content = $this->login();
+            case 'afficherPermanence' : {
+                $content = $this->afficherPermanence();
                 break;
             }
         }
@@ -33,7 +29,7 @@ class VueClient
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Mon compte</title>
+  <title>Permanence</title>
 
   <!-- Custom fonts for this template-->
   <link href="../Front/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -71,12 +67,8 @@ END;
         echo $html;
     }
 
-    private function afficherCompte() {
-        include('../Front/compte.html');
-    }
-
-    private function login() {
-        include('../Front/login.html');
+    private function afficherpermanence() {
+        include('../Front/permanence.html');
     }
 
 }

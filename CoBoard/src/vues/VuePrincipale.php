@@ -13,7 +13,6 @@ class VuePrincipale
         switch ($selecteur){
             case 'afficherAccueil' : {
                 $content = $this->afficherAccueil();
-                $cd = '';
                 break;
             }
         }
@@ -29,7 +28,7 @@ class VuePrincipale
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>CoBoard</title>
 
   <!-- Custom fonts for this template-->
   <link href="../Front/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
