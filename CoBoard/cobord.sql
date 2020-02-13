@@ -114,6 +114,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `absences` int(11) NOT NULL,
   `photo` varchar(100) NOT NULL,
   `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `admin` int(1) NOT NULL DEFAULT = 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
