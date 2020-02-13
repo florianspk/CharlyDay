@@ -1,10 +1,7 @@
 <?php
 
-
-namespace fridgie\controleurs;
-
-use fridgie\modeles\Client;
-
+namespace coboard\controleurs;
+use coboard\modeles\Client;
 class ControleurClient
 {
 

@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 session_start();
-use \Slim\Slim as Slim;
 use Illuminate\Database\Capsule\Manager as DB;
 
 $db = new DB();
@@ -13,7 +12,7 @@ $db->bootEloquent();
 $app = new \Slim\Slim();
 
 $app->get('/',function () {
-    $c = new \fridgie\controleurs\ControleurPrincipal();
+    $c = new \coboard\controleurs\ControleurPrincipal();
     $c->afficherAccueil();
 });
 
@@ -23,6 +22,7 @@ $app->get('/',function () {
  * ----------------------------------------------------------------
  */
 
+/*
 $app->get('/indexrecette', function() {
     $c = new \fridgie\controleurs\ControleurRecette();
     $c->indexRecette();
@@ -62,6 +62,7 @@ $app->post('/rechercherecette', function() {
     $c = new \fridgie\controleurs\ControleurRecette();
     $c->traitementFormulaireRechercheRecette();
 });
+*/
 
 /*
  * ----------------------------------------------------------------
@@ -69,6 +70,7 @@ $app->post('/rechercherecette', function() {
  * ----------------------------------------------------------------
  */
 
+/*
 $app->get('/indexevenement', function() {
     $c = new \fridgie\controleurs\ControleurEvenement();
     $c->indexEvenement();
@@ -109,6 +111,7 @@ $app->get('/rechercheevenement/:recherche',function ($recherche) {
     $c = new \fridgie\controleurs\ControleurEvenement();
     $c->rechercheEvenement($recherche);
 });
+*/
 
 /*
  * ----------------------------------------------------------------
@@ -116,6 +119,7 @@ $app->get('/rechercheevenement/:recherche',function ($recherche) {
  * ----------------------------------------------------------------
  */
 
+/*
 $app->post('/apporteringredient/:token', function($token) { //token = token de l'event
     $c = new \fridgie\controleurs\ControleurIngredient();
     $c->apporterIngredient($token);
@@ -132,6 +136,7 @@ $app->get('/ingredient/:id', function($id) { //id = id de l'ingredient à affich
     $c = new \fridgie\controleurs\ControleurIngredient();
     $c->afficherIngredient($id);
 });
+*/
 
 /*
  * ----------------------------------------------------------------
@@ -139,6 +144,7 @@ $app->get('/ingredient/:id', function($id) { //id = id de l'ingredient à affich
  * ----------------------------------------------------------------
  */
 
+/*
 $app->get('/inscription', function() {
     $c = new \fridgie\controleurs\ControleurClient();
     $c->creerCompte();
@@ -177,5 +183,6 @@ $app->post('/suppression', function() {
     $c = new \fridgie\controleurs\ControleurClient();
     $c->delete();
 });
+*/
 
 $app->run();
