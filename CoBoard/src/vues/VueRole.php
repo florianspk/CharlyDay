@@ -67,7 +67,7 @@ END;
     }
 
     private function role() {
-        include('../Front/role.html');
+        include('Front/role.html');
     }
 
 }

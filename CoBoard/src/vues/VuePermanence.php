@@ -68,7 +68,7 @@ END;
     }
 
     private function afficherpermanence() {
-        include('../Front/permanence.html');
+        include('Front/permanence.html');
     }
 
 }
