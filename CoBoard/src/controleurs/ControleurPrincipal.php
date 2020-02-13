@@ -1,14 +1,11 @@
 <?php
 
-
-namespace fridgie\controleurs;
-
-
+namespace coboard\controleurs;
 class ControleurPrincipal
 {
     public function afficherAccueil() {
         $tab = [];
-        $v = new \fridgie\vues\VuePrincipale($tab);
+        $v = new \coboard\vues\VuePrincipale($tab);
         $v->render('afficherAccueil');
     }
 }

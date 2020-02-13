@@ -27,9 +27,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `role` (
-  `id` int(11) NOT NULL,
-  `label` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `label` varchar(128) NOT NULL,
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=7;
 
 --
 -- Contenu de la table `role`
@@ -43,16 +44,20 @@ INSERT INTO `role` (`id`, `label`) VALUES
 (5, 'Chargé d\'accueil titulaire'),
 (6, 'Chargé d\'accueil assistant');
 
--- --------------------------------------------------------
-
---
--- Structure de la table `user`
---
 
 CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `nom` varchar(30) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_role` int(11) NOT NULL,
+  `admin` int(1) NOT NULL DEFAULT '0',
+  `nom` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `login` varchar(30) NOT NULL,
+  `mail` varchar(30),
+  'mdp' varchar(30) NOT NULL ,
+  `image` varchar(30),
+  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY login(login)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT = 5;
 
 --
 -- Contenu de la table `user`
@@ -72,35 +77,15 @@ INSERT INTO `user` (`id`, `nom`) VALUES
 (11, 'Ariane'),
 (12, 'Lois');
 
---
--- Index pour les tables exportées
---
+CREATE TABLE `creneaux` (
 
---
--- Index pour la table `role`
---
-ALTER TABLE `role`
-  ADD PRIMARY KEY (`id`);
+)
 
---
--- Index pour la table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT pour les tables exportées
---
 
---
--- AUTO_INCREMENT pour la table `role`
---
-ALTER TABLE `role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
---
--- AUTO_INCREMENT pour la table `user`
---
+
+
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

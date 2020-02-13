@@ -1,9 +1,6 @@
 <?php
 
-
-namespace fridgie\vues;
-
-
+namespace coboard\vues;
 class VueClient
 {
     private $tab;

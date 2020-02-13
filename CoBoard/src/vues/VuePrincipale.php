@@ -1,9 +1,6 @@
 <?php
 
-
-namespace fridgie\vues;
-
-
+namespace coboard\vues;
 class VuePrincipale
 {
     public $tab;
@@ -20,96 +17,57 @@ class VuePrincipale
                 break;
             }
         }
-        if (isset($_SESSION['Connexion']) == false) {
-            $html = <<<END
-<!doctype html>
-<html class="no-js" lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fridgie</title>
-    <link rel="stylesheet" href="{$cd}css/style.css">
-  </head>
-   <header class="menu" role="banner">
-		 <div id="logo"><a href="{$cd}./"><img src="{$cd}img/logo.png"></a></div>
-         <div id="menu_button">
-			 <ul>
-				<li><a class="bouton" href="{$cd}./">Accueil</a></li>
-                <li><a class="bouton" href="{$cd}indexevenement">Evenement</a></li>
-                <li><a class="bouton" href="{$cd}indexrecette">Recette</a></li>
-                <li><a class="bouton" href="{$cd}connexion">Connexion</a></li>
-         	 </ul>
-	   	</div>
-    </header>
-    <body>
+        $html =  <<<END
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SB Admin 2 - Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="../Front/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="../Front/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  $content
   
-    $content
-    
-    </body>
+  <!-- Bootstrap core JavaScript-->
+  <script src="../Front/vendor/jquery/jquery.min.js"></script>
+  <script src="../Front/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../Front/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../Front/js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="../Front/vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="../Front/js/demo/chart-area-demo.js"></script>
+  <script src="../Front/js/demo/chart-pie-demo.js"></script>
+</body>
 </html>
 END;
-        } else {
-            $html = <<<END
-<!doctype html>
-<html class="no-js" lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fridgie</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-   <header class="menu" role="banner">
-		 <div id="logo"><a href="{$cd}./"><img src="{$cd}img/logo.png"></a></div>
-         <div id="menu_button">
-			 <ul>
-				<li><a class="bouton" href="{$cd}./">Accueil</a></li>
-                <li><a class="bouton" href="{$cd}indexevenement">Evenement</a></li>
-                <li><a class="bouton" href="{$cd}indexrecette">Recette</a></li>
-                <li><a class="bouton" href="{$cd}moncompte">Mon Compte</a></li>
-         	 </ul>
-	   	</div>
-    </header>
-    <body>
-  
-    $content
-    
-    </body>
-</html>
-END;
-        }
 
         echo $html;
     }
 
     private function afficherAccueil() {
-        if (isset($_SESSION['Connexion']) == false) {
-            $res="
-<div id=\"first\"> 
-    <p><strong>Bienvenue sur Fridgie !</strong>
-    <br>Rejoignez-nous en vous inscrivant en appuyant ci-dessous.</p> 
-    <a class=\"bouton\" href=\"inscription\">Inscription</a>
-</div>";
-        } else {
-            $res="
-<div id=\"first\"> 
-    <p><strong>Bienvenue sur Fridgie !</strong>
-    <br>Recherchez une recette en appuyant ci-dessous.</p> 
-    <a class=\"bouton\" href=\"recette\">Recherche</a>
-</div>";
-        }
-        return $res."<div id='arrow01'></div><div id=\"second\">
-	<p>
-	    Fridgie est une application web développée par quatre étudiants de 2ème de DUT Informatique.			
-	    Principe du site-web :
-	    <br>Aujourd'hui, nous avons tellement de produits à consommer dans nos frigos qu'au final, nous ne savons même plus quoi manger.
-	    C'est là que Fridgie intervient. En effet, il vous permet de trouver une liste de recette en fonction des ingrédients que vous avez dans votre frigo.
-	    Mais Fridgie est plus grand que ça ! Vous pouvez aussi par exemple créer un évenement qui tourne autour d'une recette, suivant ce principe,
-	    les membres qui s'inscrivent à l'évenement peuvent vous notifier qu'ils apportent tel ou tel ingrédient, et réalisez, facilement,
-	    un plat collaboratif !
-	    <br><br> S3C - KRELL SPICK PERCIN SASSU
-    </p>
-</div>";
+        include('../Front/index.html');
     }
 }
