@@ -36,6 +36,9 @@ $app->get('/login', function() {
    $c->login();
 });
 
-
+$app->post('/login', function() {
+    $c = new \coboard\controleurs\ControleurClient();
+    $c->login();
+});
 
 $app->run();
