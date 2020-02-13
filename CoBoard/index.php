@@ -41,4 +41,25 @@ $app->post('/login', function() {
     $c->login();
 });
 
+$app->get('/periode1', function() {
+    $c = new \coboard\controleurs\ControleurPermanence();
+    $c->afficherPermanence();
+});
+
+$app->get('/periode2', function() {
+    $c = new \coboard\controleurs\ControleurPermanence();
+    $c->afficherPermanence();
+});
+
+$app->get('/periode3', function() {
+    $c = new \coboard\controleurs\ControleurPermanence();
+    $c->afficherPermanence();
+});
+
+$app->get('/periode4', function() {
+    $c = new \coboard\controleurs\ControleurPermanence();
+    $c->afficherPermanence();
+});
+
+
 $app->run();
