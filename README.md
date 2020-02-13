@@ -9,7 +9,7 @@
   
   * Application opérationnellle et fiable 
   * Qualité de l'interface 
-    ** ergonomie , fluidité, esthétique
+  ** ergonomie , fluidité, esthétique
   * Qualité technique , sécurité
   * Richesse fonctionnelle , originalité 
 
