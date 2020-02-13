@@ -1,7 +1,7 @@
 <?php
 
 
-namespace fridgie\modeles;
+namespace CoBoard\modeles;
 
 
 class Client extends \Illuminate\Database\Eloquent\Model
@@ -10,5 +10,7 @@ class Client extends \Illuminate\Database\Eloquent\Model
     protected $primaryKey = 'idCli';
     public $timestamps = false ;
 
-
+    function role(){
+        return $this->belongsTo('CoBoard\modeles\role','id');
+    }
 }
