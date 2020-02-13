@@ -8,3 +8,17 @@
 /out/
 /bin/
 .uml
+.idea
+*/bin
+*/idea
+*/src/*.class
+*/out
+CharlyDay/bin/
+CharlyDay/vendor
+/vendor
+/vendor/
+.composer
+CharlyDay/composer.json
+CharlyDay/src/conf/conf.ini
+CharlyDay/composer.lock
+
