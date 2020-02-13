@@ -49,7 +49,8 @@ CREATE TABLE IF NOT EXISTS `besoin` (
 
 DROP TABLE IF EXISTS `creneau`;
 CREATE TABLE IF NOT EXISTS `creneau` (
-  `heure` date NOT NULL,
+  `heure_debut` date NOT NULL ,
+  `heure_fin` date,
   `jour` date NOT NULL,
   `semaine` varchar(3) COLLATE utf8_general_mysql500_ci NOT NULL,
   `id_cycle` int(11) NOT NULL,
