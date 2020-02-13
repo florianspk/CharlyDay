@@ -13,7 +13,6 @@ class VuePrincipale
         switch ($selecteur){
             case 'afficherAccueil' : {
                 $content = $this->afficherAccueil();
-                $cd = '';
                 break;
             }
         }

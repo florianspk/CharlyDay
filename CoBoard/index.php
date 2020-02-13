@@ -16,6 +16,26 @@ $app->get('/',function () {
     $c->afficherAccueil();
 });
 
+$app->get('/permanence', function() {
+   $c = new \coboard\controleurs\ControleurPermanence();
+   $c->afficherPermanence();
+});
+
+$app->get('/role', function() {
+   $c = new \coboard\controleurs\ControleurRole();
+   $c->afficherRole();
+});
+
+$app->get('/compte', function() {
+   $c = new \coboard\controleurs\ControleurClient();
+   $c->afficherCompte();
+});
+
+$app->get('/login', function() {
+   $c = new \coboard\controleurs\ControleurClient();
+   $c->login();
+});
+
 /*
  * ----------------------------------------------------------------
  *  Controleur Recette
