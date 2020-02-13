@@ -87,12 +87,12 @@ CREATE TABLE IF NOT EXISTS `role` (
 --
 
 INSERT INTO `role` (`id`, `label`) VALUES
-(1, ''Caissier titulaire''),
-(2, ''Caissier assistant''),
-(3, ''Gestionnaire de vrac titulaire''),
-(4, ''Gestionnaire de vrac assistant''),
-(5, ''Chargé d\''accueil titulaire''),
-(6, ''Chargé d\''accueil assistant'');
+(1, 'Caissier titulaire'),
+(2, 'Caissier assistant'),
+(3, 'Gestionnaire de vrac titulaire'),
+(4, 'Gestionnaire de vrac assistant'),
+(5, 'Chargé d\'accueil titulaire'),
+(6, 'Chargé d\'accueil assistant');
 
 -- --------------------------------------------------------
 
@@ -121,16 +121,16 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `nom`, `prenom`, `login`, `mdp`, `mail`, `tel`, `permanance`, `absences`, `photo`, `token`) VALUES
-(1, ''Cassandre'', ''Achille'', ''je'', ''1234'', ''Cassandre@gmail.com'', ''0606060606'', 0, 0, '''', ''1''),
-(2, ''Achille'', ''Cassandre'', ''suis'', ''1234'', ''Achille@gmail.com'', ''0606060606'', 0, 0, '''', ''2''),
-(3, ''Calypso'', ''Achille'', ''la'', ''1234'', ''Calypso@gmail.com'', ''0606060606'', 0, 0, '''', ''3''),
-(4, ''Bacchus'', ''Achille'', ''mais'', ''1234'', ''Bacchus@gmail.com'', ''0606060606'', 0, 0, '''', ''4''),
-(5, ''Diane'', ''Achille'', ''ca'', ''1234'', ''Diane@gmail.com'', ''0606060606'', 0, 0, '''', ''5''),
-(6, ''Clark'', ''Achille'', ''me'', ''1234'', ''Clark@gmail.com'', ''0606060606'', 0, 0, '''', ''8''),
-(9, ''Bruce'', ''Achille'', ''saoul'', ''1234'', ''Bruce@gmail.com'', ''0606060606'', 0, 0, '''', ''9''),
-(10, ''Pénélope'', ''Achille'', ''yo'', ''1234'', ''Pénélope@gmail.com'', ''0606060606'', 0, 0, '''', ''10''),
-(11, ''Ariane'', ''Achille'', ''ici'', ''1234'', ''Ariane@gmail.com'', ''0606060606'', 0, 0, '''', ''11''),
-(12, ''Lois'', ''Achille'', ''moi'', ''1234'', ''Lois@gmail.com'', ''0606060606'', 0, 0, '''', ''12'');
+(1, 'Cassandre', 'Achille', 'je', '1234', 'Cassandre@gmail.com', '0606060606', 0, 0, '', '1'),
+(2, 'Achille', 'Cassandre', 'suis', '1234', 'Achille@gmail.com', '0606060606', 0, 0, '', '2'),
+(3, 'Calypso', 'Achille', 'la', '1234', 'Calypso@gmail.com', '0606060606', 0, 0, '', '3'),
+(4, 'Bacchus', 'Achille', 'mais', '1234', 'Bacchus@gmail.com', '0606060606', 0, 0, '', '4'),
+(5, 'Diane', 'Achille', 'ca', '1234', 'Diane@gmail.com', '0606060606', 0, 0, '', '5'),
+(6, 'Clark', 'Achille', 'me', '1234', 'Clark@gmail.com', '0606060606', 0, 0, '', '8'),
+(9, 'Bruce', 'Achille', 'saoul', '1234', 'Bruce@gmail.com', '0606060606', 0, 0, '', '9'),
+(10, 'Pénélope', 'Achille', 'yo', '1234', 'Pénélope@gmail.com', '0606060606', 0, 0, '', '10'),
+(11, 'Ariane', 'Achille', 'ici', '1234', 'Ariane@gmail.com', '0606060606', 0, 0, '', '11'),
+(12, 'Lois', 'Achille', 'moi', '1234', 'Lois@gmail.com', '0606060606', 0, 0, '', '12');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
@@ -138,3 +138,5 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 insert into creneau values('12H','15H',10, 'Lundi','A', 01, 1, 'Le creneau', 'OCT');
+
+
