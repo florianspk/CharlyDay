@@ -1,0 +1,385 @@
+html {
+	font: 400 12px/1.667 "Open Sans", sans-serif;
+}
+
+.menu {
+	background-color: white;
+	left: 0;
+	overflow: hidden;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	width: 100%;
+	height: 50px;
+	z-index: 100;
+	border: 0px;
+	border-bottom: 2px;
+	border-style: solid;
+	border-color: #AAA;
+}
+
+#logo > a > img {
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	float: left;
+}
+
+#menu_button{
+	position: relative;
+	float: right;
+	margin: 0;
+	padding:0;
+	height: 100%;
+}
+
+#menu_button > ul {
+	position: relative;
+	display: flex;
+	list-style: none;
+	margin: auto;
+	height: 100%;
+}
+
+.bouton {
+	display: block;
+	font-size: 18px;
+	text-decoration: none;
+	transition: all 0.3s linear;
+	border: 10px;
+	border-style: solid; border-color: #3BC;
+	background:#3BC;
+	text-align: center;
+	color: white;
+	padding: 0;
+	margin: auto;
+}
+
+.bouton:hover {
+	border-color: #39C;
+	background:#39C;
+}
+
+body {
+	background-image: url(../img/accueil00.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#first{
+	font: 400 24px/1.667 "Open Sans", sans-serif;
+	background-color: white;
+	padding: 10px;
+	margin: auto;
+	position: fixed;
+ 	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	align-content: center;
+	margin-top: 25%;
+	width: 50%;
+	z-index: 10;
+}
+
+#first > a {
+	width: 30%;
+}
+
+#arrow01 {
+	display: block;
+	background-image: url("../img/arrow01.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: fixed;
+	padding: 10px;
+	transform: translate(-50px, 0px);
+	left: 50%;
+	bottom: -4%;
+	width: 80px;
+	height: 80px;
+	z-index: 10;
+}
+
+#second{
+	font-size: 20px;
+	background-color: white;
+	padding: 10px;
+	margin: auto;
+	position: absolute;
+ 	left: 0px;
+	text-align: center;
+	top: 100%;
+	width: 100%;
+    box-sizing: border-box;
+	z-index: 50;
+	border-top: solid;
+}
+
+.center {
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    align-content: center;
+    margin-top: 15%;
+    width: 50%;
+    min-width: 500px;
+    z-index: 10;
+}
+
+.exception {
+	color: red;
+	font-size: 15px;
+}
+
+fieldset {
+		border-radius: 5px;
+}
+
+fieldset > legend{
+		font-size: 24px;
+}
+
+label {
+    font-size: 20px;
+    float: left;
+    text-align: right;
+}
+
+input:not([type=submit]):focus {
+    border-color:#333;
+}
+
+input:not([type=submit]) {
+    border-radius: 5px;
+    float: right;
+    text-align: left;
+    font-size: 18px;
+    width: 50%;
+}
+
+input[type=submit], button {
+    font: 400 18px/1.667 "Open Sans", sans-serif;
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.list {
+	font-size: 24px;
+	background-color: white;
+	padding: 10px;
+	margin: auto;
+	position: absolute;
+ 	left: 50%;
+	transform: translate(-50%, -0px);
+	text-align: center;
+	align-content: center;
+	margin-top: 70px;
+	width: 90%;
+	min-width: 100px;
+	min-height: 80%;
+	z-index: 10;
+}
+
+.element {
+	padding: 2px;
+	background: #DDD;
+	margin: 0;
+	border: 1px;
+	border-style: solid; 
+	border-color: #AAA;
+	height: 15%;
+	overflow: hidden;
+	margin: 5px;
+}
+
+.element > .title{
+	margin: 0;
+	padding:0;
+	position: absolute;
+	text-align: left;
+	text-decoration: none;
+	left: 180px;
+	font-size: 28px;
+}
+
+.element > .desc{
+	display: flex;
+	position: absolute;
+	text-align: left;
+	text-justify: inter-character;
+	transform: translate(-0%, +26px);
+	left: 170px;
+	height: 10%;
+	width: 45%;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+.element > a >img {
+	float: left;
+	left: 0;
+	height: 138px;
+	overflow: hidden
+}
+
+.choixRecette {
+	font-size: 24px;
+	background-color: white;
+	padding: 10px;
+	margin: auto;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	align-content: center;
+	margin-top: 25%;
+	width: 50%;
+	z-index: 10;
+}
+
+.choixEvent {
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-content: center;
+    margin-top: 25%;
+    width: 50%;
+    z-index: 10;
+}
+
+.creationEvenement {
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    align-content: center;
+    margin-top: 12.5%;
+    width: 50%;
+    min-width: 500px;
+    z-index: 10;
+}
+
+#con {
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    align-content: center;
+    margin-top: 12.5%;
+    width: 50%;
+    min-width: 500px;
+    z-index: 10;
+}
+
+.conPadding {
+    align-content: center;
+    padding: 50px;
+    padding-bottom: 100px;
+}
+
+.labelCon {
+    float: left;
+    text-align: right;
+}
+
+.inputCon {
+    float: right;
+    text-align: left;
+    font-size: 18px;
+    width: 50%;
+}
+
+#ins {
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    align-content: center;
+    margin-top: 12.5%;
+    width: 50%;
+    min-width: 600px;
+    z-index: 10;
+}
+
+.labelIns {
+    font-size: 20px;
+    float: left;
+    text-align: right;
+}
+
+.inputIns {
+    float: right;
+    text-align: left;
+    font-size: 18px;
+    width: 50%;
+}
+
+input[type=search] {
+    float: right;
+    text-align: left;
+    font-size: 18px;
+    width: 80%;
+}
+
+.searchDiv {
+    padding: 2px;
+    background-color: white;
+    margin: 0;
+    border: 1px;
+    border-style: solid;
+    border-color: #AAA;
+    height: 15%;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.searchEvent {
+    width: 50%;
+}
+
+.form {
+	font-size: 24px;
+	background-color: white;
+	padding: 10px;
+	margin: auto;
+	position: relative;
+	text-align: center;
+	align-content: center;
+	margin-top: 12.5%;
+	width: 60%;
+	min-width: 500px;
+	z-index: 10;
+}
+
+.labelForm {
+	float: left;
+	text-align: right;
+}
+
+.inputForm {
+	float: right;
+	text-align: left;
+	font-size: 18px;
+	width: 50%;
+}
