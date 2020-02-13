@@ -24,15 +24,7 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Structure de la table `alerte`
---
 
-DROP TABLE IF EXISTS `alerte`;
-CREATE TABLE IF NOT EXISTS `alerte` (
-  `id_alerte` int(11) NOT NULL,
-  `id_besoin` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 -- --------------------------------------------------------
 
@@ -43,7 +35,10 @@ CREATE TABLE IF NOT EXISTS `alerte` (
 DROP TABLE IF EXISTS `besoin`;
 CREATE TABLE IF NOT EXISTS `besoin` (
   `role_id` int(11) NOT NULL,
-  `creneau_id` int(11) NOT NULL
+  `creneau_id` int(11) NOT NULL,
+  `user_id` int(11),
+  `recurent` boolean,
+  primary key (role_id,creneau_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 -- --------------------------------------------------------
@@ -57,8 +52,10 @@ CREATE TABLE IF NOT EXISTS `creneau` (
   `heure` date NOT NULL,
   `jour` date NOT NULL,
   `semaine` varchar(3) COLLATE utf8_general_mysql500_ci NOT NULL,
-  `id_cycle` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
+  `id_cycle` int(11) NOT NULL,
+  `id_creneau` int(10) NOT NULL AUTO_INCREMENT,
+  primary key (id_creneau)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 -- --------------------------------------------------------
 
@@ -68,7 +65,8 @@ CREATE TABLE IF NOT EXISTS `creneau` (
 
 DROP TABLE IF EXISTS `cycle`;
 CREATE TABLE IF NOT EXISTS `cycle` (
-  `id_cycle` int(11) NOT NULL
+  `id_cycle` int(11) NOT NULL,
+  primary key (id_cycle)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 -- --------------------------------------------------------
@@ -114,6 +112,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `permanance` int(11) NOT NULL,
   `absences` int(11) NOT NULL,
   `photo` varchar(100) NOT NULL,
+  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
@@ -121,19 +120,17 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id`, `nom`, `prenom`, `login`, `mdp`, `mail`, `tel`, `permanance`, `absences`, `photo`) VALUES
-(1, 'Cassandre', '', '', '', '', '', 0, 0, ''),
-(2, 'Achille', '', '', '', '', '', 0, 0, ''),
-(3, 'Calypso', '', '', '', '', '', 0, 0, ''),
-(4, 'Bacchus', '', '', '', '', '', 0, 0, ''),
-(5, 'Diane', '', '', '', '', '', 0, 0, ''),
-(6, 'Clark', '', '', '', '', '', 0, 0, ''),
-(7, 'Helene', '', '', '', '', '', 0, 0, ''),
-(8, 'Jason', '', '', '', '', '', 0, 0, ''),
-(9, 'Bruce', '', '', '', '', '', 0, 0, ''),
-(10, 'Pénélope', '', '', '', '', '', 0, 0, ''),
-(11, 'Ariane', '', '', '', '', '', 0, 0, ''),
-(12, 'Lois', '', '', '', '', '', 0, 0, '');
+INSERT INTO `user` (`id`, `nom`, `prenom`, `login`, `mdp`, `mail`, `tel`, `permanance`, `absences`, `photo` ,`token`) VALUES
+(1, 'Cassandre', '', '', '', '', '', 0, 0, '','1'),
+(2, 'Achille', '', '', '', '', '', 0, 0, '','2'),
+(3, 'Calypso', '', '', '', '', '', 0, 0, '','3'),
+(4, 'Bacchus', '', '', '', '', '', 0, 0, '','4'),
+(5, 'Diane', '', '', '', '', '', 0, 0, '','5'),
+(6, 'Clark', '', '', '', '', '', 0, 0, '','8'),
+(9, 'Bruce', '', '', '', '', '', 0, 0, '','9'),
+(10, 'Pénélope', '', '', '', '', '', 0, 0, '','10'),
+(11, 'Ariane', '', '', '', '', '', 0, 0, '','11'),
+(12, 'Lois', '', '', '', '', '', 0, 0, '','12');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

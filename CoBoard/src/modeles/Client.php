@@ -11,6 +11,6 @@ class Client extends \Illuminate\Database\Eloquent\Model
     public $timestamps = false ;
 
     function role(){
-        return $this->belongsTo('CoBoard\modeles\role','id');
+        return $this->belongsTo('CoBoard\modeles\Role','id');
     }
 }

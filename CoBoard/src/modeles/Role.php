@@ -10,7 +10,7 @@ class Role extends \Illuminate\Database\Eloquent\Model {
     public $timestamps = false;
 
     public function users(){
-        return $this->hasMany('CoBoard\modeles\Role','user.id');
+        return $this->hasMany('CoBoard\modeles\user','id');
     }
 
 

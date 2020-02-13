@@ -8,4 +8,6 @@ class ControleurPrincipal
         $v = new \coboard\vues\VuePrincipale($tab);
         $v->render('afficherAccueil');
     }
+
+
 }
