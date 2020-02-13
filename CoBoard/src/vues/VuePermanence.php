@@ -1,6 +1,8 @@
 <?php
 
 namespace coboard\vues;
+use CoBoard\modeles\Creneau;
+
 class VuePermanence
 {
 
@@ -68,7 +70,31 @@ END;
     }
 
     private function afficherpermanence() {
-        include('../Front/permanence.html');
+        $res = file_get_contents('../Front/permanence.html');
+        foreach ($this->tab as $c) {
+            $contenu = <<<HTML
+<div class="row row-striped">
+                        <div class="col-2 text-right">
+                            <h1 class="display-4"><span class="badge badge-secondary">25</span></h1>
+                            <h2>OCT</h2>
+                        </div>
+                        <div class="col-10">
+                            <h3 class="text-uppercase"><strong>Ice Cream Social</strong></h3>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> Monday</li>
+                                <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> 12:30 PM - 2:00 PM</li>
+                                <li class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Cafe</li>
+                            </ul>
+                            <p>Lorem ipsum dolsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+HTML;
+            echo "<pre>";
+            var_dump($c);
+        }
+        return  str_replace("%contenu%", $contenu, $res);
+
+        //include('../Front/permanence.html');
     }
 
 }
