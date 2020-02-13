@@ -119,17 +119,19 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `nom`, `prenom`, `login`, `mdp`, `mail`, `tel`, `permanance`, `absences`, `photo`, `token`) VALUES
-(1, 'Cassandre', '', '', '', '', '', 0, 0, '', '1'),
-(2, 'Achille', '', '', '', '', '', 0, 0, '', '2'),
-(3, 'Calypso', '', '', '', '', '', 0, 0, '', '3'),
-(4, 'Bacchus', '', '', '', '', '', 0, 0, '', '4'),
-(5, 'Diane', '', '', '', '', '', 0, 0, '', '5'),
-(6, 'Clark', '', '', '', '', '', 0, 0, '', '8'),
-(9, 'Bruce', '', '', '', '', '', 0, 0, '', '9'),
-(10, 'Pénélope', '', '', '', '', '', 0, 0, '', '10'),
-(11, 'Ariane', '', '', '', '', '', 0, 0, '', '11'),
-(12, 'Lois', '', '', '', '', '', 0, 0, '', '12');
+(1, 'Cassandre', 'Achille', 'je', '1234', 'Cassandre@gmail.com', '0606060606', 0, 0, '', '1'),
+(2, 'Achille', 'Cassandre', 'suis', '1234', 'Achille@gmail.com', '0606060606', 0, 0, '', '2'),
+(3, 'Calypso', 'Achille', 'la', '1234', 'Calypso@gmail.com', '0606060606', 0, 0, '', '3'),
+(4, 'Bacchus', 'Achille', 'mais', '1234', 'Bacchus@gmail.com', '0606060606', 0, 0, '', '4'),
+(5, 'Diane', 'Achille', 'ca', '1234', 'Diane@gmail.com', '0606060606', 0, 0, '', '5'),
+(6, 'Clark', 'Achille', 'me', '1234', 'Clark@gmail.com', '0606060606', 0, 0, '', '8'),
+(9, 'Bruce', 'Achille', 'saoul', '1234', 'Bruce@gmail.com', '0606060606', 0, 0, '', '9'),
+(10, 'Pénélope', 'Achille', 'yo', '1234', 'Pénélope@gmail.com', '0606060606', 0, 0, '', '10'),
+(11, 'Ariane', 'Achille', 'ici', '1234', 'Ariane@gmail.com', '0606060606', 0, 0, '', '11'),
+(12, 'Lois', 'Achille', 'moi', '1234', 'Lois@gmail.com', '0606060606', 0, 0, '', '12');
 COMMIT;
+
+INSERT INTO `creneau`  
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
