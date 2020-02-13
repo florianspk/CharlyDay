@@ -14,6 +14,7 @@ if (!setlocale(LC_TIME, 'fr_FR.utf8', 'fr_FR', 'fr'))
  * @return object
  * @throws Exception
  */
+
 function calc_date($ancre, $semaine, $jour, $cycle = 0)
 {
     // On vérifie les paramètres...
