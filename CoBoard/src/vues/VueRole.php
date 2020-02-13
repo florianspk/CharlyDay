@@ -63,7 +63,7 @@ class VueRole
 </html>
 END;
 
-        echo $html;
+        //echo $html;
     }
 
     private function role() {
