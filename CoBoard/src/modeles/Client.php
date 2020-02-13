@@ -10,4 +10,5 @@ class Client extends \Illuminate\Database\Eloquent\Model
     protected $primaryKey = 'idCli';
     public $timestamps = false ;
 
+
 }

@@ -51,7 +51,8 @@ INSERT INTO `role` (`id`, `label`) VALUES
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `nom` varchar(30) CHARACTER SET utf8 NOT NULL
+  `nom` varchar(30) CHARACTER SET utf8 NOT NULL,
+  ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
