@@ -173,9 +173,7 @@ END;
     private function creationEvenementPost() {
         $res="<section> <div id=\"first\"> 
         <p><strong>Evenement ajouté avec succès ! </strong>
-        <a class=\"bouton\" href='./afficherevenement/". $this->tab->tokenEvent . "'>retour à l'evenement</a>
-        <a class=\"bouton\" href=\"indexevenement\">Retour au menu évenement</a>
-        <a class=\"bouton\" href=\".\">Accueil</a>";
+        <a class=\"bouton\" href='./afficherevenement/". $this->tab->tokenEvent . ">Accueil</a>";
         return $res."</div> </section>";
     }
 
