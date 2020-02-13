@@ -93,8 +93,6 @@ HTML;
             var_dump($c);
         }
         return  str_replace("%contenu%", $contenu, $res);
-
-        //include('../Front/permanence.html');
     }
 
 }

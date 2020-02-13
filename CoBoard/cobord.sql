@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 13 fév. 2020 à 11:23
+-- Généré le :  jeu. 13 fév. 2020 à 17:22
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -19,12 +19,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `cobord`
+-- Base de données :  `coboard`
 --
-
--- --------------------------------------------------------
-
-
 
 -- --------------------------------------------------------
 
@@ -36,9 +32,9 @@ DROP TABLE IF EXISTS `besoin`;
 CREATE TABLE IF NOT EXISTS `besoin` (
   `role_id` int(11) NOT NULL,
   `creneau_id` int(11) NOT NULL,
-  `user_id` int(11),
-  `recurent` boolean,
-  primary key (role_id,creneau_id)
+  `user_id` int(11) DEFAULT NULL,
+  `recurent` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`role_id`,`creneau_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 -- --------------------------------------------------------
@@ -49,14 +45,15 @@ CREATE TABLE IF NOT EXISTS `besoin` (
 
 DROP TABLE IF EXISTS `creneau`;
 CREATE TABLE IF NOT EXISTS `creneau` (
-  `heure_debut` date NOT NULL ,
-  `heure_fin` date,
-  `jour` date NOT NULL,
+  `heure` date NOT NULL,
+  `jour` int(11) NOT NULL,
   `semaine` varchar(3) COLLATE utf8_general_mysql500_ci NOT NULL,
   `id_cycle` int(11) NOT NULL,
   `id_creneau` int(10) NOT NULL AUTO_INCREMENT,
-  primary key (id_creneau)
-) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
+  `desc` text COLLATE utf8_general_mysql500_ci NOT NULL,
+  `id_mois` int(11) NOT NULL,
+  PRIMARY KEY (`id_creneau`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 -- --------------------------------------------------------
 
@@ -67,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `creneau` (
 DROP TABLE IF EXISTS `cycle`;
 CREATE TABLE IF NOT EXISTS `cycle` (
   `id_cycle` int(11) NOT NULL,
-  primary key (id_cycle)
+  PRIMARY KEY (`id_cycle`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 -- --------------------------------------------------------
@@ -113,8 +110,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `permanance` int(11) NOT NULL,
   `absences` int(11) NOT NULL,
   `photo` varchar(100) NOT NULL,
-  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `admin` int(1) NOT NULL DEFAULT = 0,
+  `token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
@@ -122,17 +118,17 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id`, `nom`, `prenom`, `login`, `mdp`, `mail`, `tel`, `permanance`, `absences`, `photo` ,`token`) VALUES
-(1, 'Cassandre', '', '', '', '', '', 0, 0, '','1'),
-(2, 'Achille', '', '', '', '', '', 0, 0, '','2'),
-(3, 'Calypso', '', '', '', '', '', 0, 0, '','3'),
-(4, 'Bacchus', '', '', '', '', '', 0, 0, '','4'),
-(5, 'Diane', '', '', '', '', '', 0, 0, '','5'),
-(6, 'Clark', '', '', '', '', '', 0, 0, '','8'),
-(9, 'Bruce', '', '', '', '', '', 0, 0, '','9'),
-(10, 'Pénélope', '', '', '', '', '', 0, 0, '','10'),
-(11, 'Ariane', '', '', '', '', '', 0, 0, '','11'),
-(12, 'Lois', '', '', '', '', '', 0, 0, '','12');
+INSERT INTO `user` (`id`, `nom`, `prenom`, `login`, `mdp`, `mail`, `tel`, `permanance`, `absences`, `photo`, `token`) VALUES
+(1, 'Cassandre', '', '', '', '', '', 0, 0, '', '1'),
+(2, 'Achille', '', '', '', '', '', 0, 0, '', '2'),
+(3, 'Calypso', '', '', '', '', '', 0, 0, '', '3'),
+(4, 'Bacchus', '', '', '', '', '', 0, 0, '', '4'),
+(5, 'Diane', '', '', '', '', '', 0, 0, '', '5'),
+(6, 'Clark', '', '', '', '', '', 0, 0, '', '8'),
+(9, 'Bruce', '', '', '', '', '', 0, 0, '', '9'),
+(10, 'Pénélope', '', '', '', '', '', 0, 0, '', '10'),
+(11, 'Ariane', '', '', '', '', '', 0, 0, '', '11'),
+(12, 'Lois', '', '', '', '', '', 0, 0, '', '12');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
