@@ -68,7 +68,6 @@ class ControleurAdmin
             $tab = array("erreur" => "Les mots de passes ne sont pas identique");
             $vueCompte = new VueClient($tab);
             $vueCompte->render("creerCompte");
-
         }else {
             $existe = Client::where("login", "=", $cl);
             if (strlen($cmdp) < 7) {

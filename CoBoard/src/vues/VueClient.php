@@ -80,21 +80,21 @@ END;
     }
 
     private function afficherCompte() {
-      return  include('../Front/compte.html');
+      return  include('Front/compte.html');
     }
 
     private function login() {
-       return include('../Front/login.html');
+       return include('Front/login.html');
     }
 
     private function creerCompte()
     {
-       return include('../Front/register.html');
+       return include('Front/register.html');
     }
 
     private function permanence()
     {
-       return include ('../Front/permanance.html');
+       return include ('Front/permanence.html');
     }
 
 
