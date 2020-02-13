@@ -77,9 +77,6 @@ INSERT INTO `user` (`id`, `nom`) VALUES
 (11, 'Ariane'),
 (12, 'Lois');
 
-CREATE TABLE `creneaux` (
-
-)
 
 
 
